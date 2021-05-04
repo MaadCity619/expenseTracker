@@ -8,10 +8,19 @@ function App() {
     {id:"e3",title:"Steam", amount:1600,date: new Date(2000,11,4)},
     {id:"e4",title:"Netflix", amount:100,date: new Date(2000,11,8)}
   ];
+
+  function addExpenseHandler(expense){
+console.log("In App.js");
+console.log(expense)
+
+  }
+
+
+
   //Se paso como argumento
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses}/>
 
     </div>
